@@ -1,0 +1,188 @@
+@import "tailwindcss";
+@import "../../node_modules/preline/variants.css";
+@source "../../node_modules/preline/dist/*.js";
+@import "../../node_modules/preline/css/themes/theme.css";
+
+/* ============================================
+   BRAND TOKENS
+============================================ */
+
+:root,
+body[data-theme="light"] {
+    /* Primary brand color (Red from logo) */
+    --primary: #C62828;
+    --primary-light: #E53935;
+    --primary-dark: #8E0000;
+    --primary-hover: #B71C1C;
+    --primary-fill: #D32F2F;
+
+    /* Supporting Grey */
+    --secondary: #616161;
+    --secondary-light: #9E9E9E;
+    --secondary-dark: #424242;
+    --secondary-hover: #757575;
+    --secondary-fill: #707070;
+
+    /* Neutral Backgrounds */
+    --fill: #FAFAFA;
+    /* very light grey */
+    --alt: #F5F5F5;
+    /* slightly darker neutral */
+    --surface: #FFFFFF;
+    /* pure white for cards */
+    --surface-dark: #EEEEEE;
+    /* soft grey for contrast */
+
+    /* Muted text */
+    --muted: #777777;
+
+
+    /* Text colors */
+    --foreground: #333333;
+    --foreground-dark: #1B1B1B;
+    --foreground-soft: #4F4F4F;
+    --foreground-light: #FFFFFF;
+}
+
+body[data-theme="dark"] {
+    /* Primary brand color (Red from logo) */
+    --primary: #EF5350;
+    /* softer red for dark mode */
+    --primary-light: #FF867C;
+    --primary-dark: #C62828;
+    --primary-hover: #E53935;
+    --primary-fill: #D32F2F;
+
+    /* Supporting Grey */
+    --secondary: #B0BEC5;
+    /* light grey for text on dark bg */
+    --secondary-light: #CFD8DC;
+    --secondary-dark: #78909C;
+    --secondary-hover: #90A4AE;
+    --secondary-fill: #9E9E9E;
+
+    /* Dark Backgrounds */
+    --fill: #121212;
+    /* deep dark base */
+    --alt: #1E1E1E;
+    /* slightly lighter dark */
+    --surface: #212121;
+    /* card surfaces */
+    --surface-dark: #2C2C2C;
+    /* elevated surfaces */
+
+    /* Muted text */
+    --muted: #9E9E9E;
+
+    /* Text colors */
+    --foreground: #E0E0E0;
+    --foreground-dark: #FFFFFF;
+    --foreground-soft: #BDBDBD;
+    --foreground-light: #FAFAFA;
+
+}
+
+/* ============================================
+   TAILWIND Generated Utilities
+============================================ */
+
+@theme {
+    --color-primary: var(--primary);
+    --color-primary-light: var(--primary-light);
+    --color-primary-dark: var(--primary-dark);
+    --color-primary-fill: var(--primary-fill);
+    --color-primary-hover: var(--primary-hover);
+    --color-primary-soft: var(--primary-soft);
+
+    --color-primary-50: color-mix(in srgb, var(--primary) 10%, white);
+    --color-primary-100: color-mix(in srgb, var(--primary) 20%, white);
+    --color-primary-200: color-mix(in srgb, var(--primary) 30%, white);
+    --color-primary-300: color-mix(in srgb, var(--primary) 40%, white);
+    --color-primary-400: var(--primary-soft);
+    --color-primary-500: color-mix(in srgb, var(--primary) 70%, white);
+    --color-primary-600: color-mix(in srgb, var(--primary) 80%, black);
+    --color-primary-700: var(--primary-hover);
+    --color-primary-800: var(--primary);
+
+
+
+    --color-secondary: var(--secondary);
+    --color-secondary-light: var(--secondary-light);
+    --color-secondary-dark: var(--secondary-dark);
+    --color-secondary-fill: var(--secondary-fill);
+    --color-secondary-hover: var(--secondary-hover);
+    --color-secondary-soft: var(--secondary-soft);
+
+    --color-secondary-50: color-mix(in srgb, var(--secondary) 10%, white);
+    --color-secondary-100: color-mix(in srgb, var(--secondary) 20%, white);
+    --color-secondary-200: color-mix(in srgb, var(--secondary) 30%, white);
+    --color-secondary-300: color-mix(in srgb, var(--secondary) 40%, white);
+    --color-secondary-400: var(--secondary-soft);
+    --color-secondary-500: color-mix(in srgb, var(--secondary) 70%, white);
+    --color-secondary-600: color-mix(in srgb, var(--secondary) 80%, black);
+    --color-secondary-700: var(--secondary-hover);
+    --color-secondary-800: var(--secondary);
+
+    --color-fill: var(--fill);
+    --color-alt: var(--alt);
+    --color-surface: var(--surface);
+    --color-surface-dark: var(--surface-dark);
+    --color-muted: var(--muted);
+
+    --color-fore-color: var(--foreground);
+    --color-fore-color-soft: var(--foreground-soft);
+    --color-fore-color-dark: var(--foreground-dark);
+    --color-fore-color-light: var(--foreground-light);
+}
+
+
+/* ============================================
+   CUSTOM RESET
+============================================ */
+
+html {
+
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 110%;
+}
+
+body {
+    font: inherit;
+    background-color: var(--fill);
+    color: var(--foreground);
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+
+    line-height: 1.2;
+}
+
+p,
+label,
+span,
+strong,
+small {
+    line-height: 1.6;
+}
+
+a {
+    transition: opacity 0.2s ease;
+}
+
+a:hover {
+    opacity: 0.85;
+}

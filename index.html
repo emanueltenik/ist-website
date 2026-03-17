@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> IST | Home </title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles/global.css">
+  <style>
+    @media screen and (max-width: 320px) {
+      #featured-courses {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    @media screen and (max-width: 412px) {
+
+      #featured-courses li {
+        flex-basis: 90%;
+
+      }
+    }
+
+    @media screen and (min-width: 1130px) {
+      #featured-courses ul {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body data-theme="dark">
+
+
+  <!-- ========== HEADER ========== -->
+  <header class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full bg-primary relative shadow">
+    <nav
+      class="relative max-w-5xl w-full flex flex-wrap md:flex-nowrap basis-full items-center justify-between py-2 ps-5 pe-2 md:py-[4px] mx-2 lg:mx-auto">
+      <div class="flex items-center">
+        <!-- Logo -->
+        <a class="flex-none rounded-md text-xl inline-block font-semibold focus:outline-hidden focus:opacity-80"
+          href="index.html" aria-label="Preline">
+          <h1>
+            <abbr title="Institute Of Software Technologies" style="text-decoration: none;" class="text-alt">
+              IST
+            </abbr>
+          </h1>
+        </a>
+        <!-- End Logo -->
+
+
+        <!-- Theme toggler -->
+        <div class="ml-8">
+
+          <button data-theme-click
+            class="flex justify-center items-center size-7 bg-layer border border-layer-line text-layer-foreground rounded-full hover:bg-layer-hover focus:outline-hidden focus:bg-layer-focus">
+
+          </button>
+        </div>
+
+        <!-- End of Theme toggler -->
+
+
+        <div class="ms-1 sm:ms-2">
+
+        </div>
+      </div>
+
+      <!-- Button Group -->
+      <div class="md:order-3 flex items-center gap-x-3">
+        <div class="hidden md:block md:ps-3">
+          <a class="group inline-flex items-center gap-x-2 py-2 px-4 bg-surface-dark text-xs text-nowrap rounded rounded-[26px] text-primary-dark focus:outline-hidden"
+            href="#">
+            Signin
+          </a>
+        </div>
+
+        <div class="md:hidden">
+          <button type="button"
+            class="hs-collapse-toggle size-9 flex justify-center items-center text-sm font-semibold rounded-full border border-layer-line text-surface-dark disabled:opacity-50 disabled:pointer-events-none"
+            id="hs-pro-an-collapse" aria-expanded="false" aria-controls="hs-pro-an" aria-label="Toggle navigation"
+            data-hs-collapse="#hs-pro-an">
+            <svg class="hs-collapse-open:hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+              height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="3" x2="21" y1="6" y2="6" />
+              <line x1="3" x2="21" y1="12" y2="12" />
+              <line x1="3" x2="21" y1="18" y2="18" />
+            </svg>
+            <svg class="hs-collapse-open:block hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
+              height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- End Button Group -->
+
+      <!-- Collapse -->
+      <div id="hs-pro-an"
+        class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block"
+        aria-labelledby="hs-pro-an-collapse" role="region">
+        <!-- Nav -->
+        <div class="overflow-hidden overflow-y-auto max-h-[75vh] [&::-webkit-scrollbar]:w-0">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-end gap-y-3 pt-6 pb-2 md:py-0 md:ps-7">
+            <a class="md:px-3 md:py-4 text-base text-surface-dark" href="index.html" aria-current="page">Home</a>
+
+            <!-- Dropdown Link -->
+
+            <a class="md:px-3 md:py-4 text-base text-surface-dark" href="index.html" aria-current="page">About </a>
+
+            <!-- Dropdown Link -->
+
+
+
+            <div
+              class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] [--auto-close:inside] md:inline-block">
+              <!-- Link Button -->
+              <button id="hs-pro-ancpd" type="button"
+                class="hs-dropdown-toggle md:px-3 md:py-4 w-full md:w-auto flex items-center text-base text-surface-dark"
+                aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                Courses
+                <svg
+                  class="hs-dropdown-open:-rotate-180 md:hs-dropdown-open:rotate-0 duration-300 ms-auto md:ms-1 shrink-0 size-3.5"
+                  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <!-- End Link Button -->
+
+              <!-- Dropdown Menu -->
+              <div
+                class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] lg:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 relative w-full md:w-50 hidden z-10 top-full rounded-lg  md:shadow-xl before:absolute before:-top-4 before:start-0 before:w-full before:h-5 md:after:hidden mt-2 md:mt-0 bg-primary-dark"
+                role="menu" aria-orientation="vertical" aria-labelledby="hs-pro-ancpd">
+                <div class="p-5 flex flex-col gap-y-3">
+                  <section class="flex gap-6  flex-col">
+
+                    <h2 class="text-surface-dark text-sm" style="color: #f0f0f0;"> Popular Courses</h2>
+                    <hr class="border-gray-300 " />
+                    <a class="text-sm text-surface-dark hover:underline" href="#"> Web Development </a>
+                    <a class="text-sm text-surface-dark hover:underline" href="#"> UI/UX design </a>
+
+                    <a class="text-sm text-surface-dark hover:underline" href="#">FrontEnd Development</a>
+
+
+                    <h2 class="text-surface-dark text-sm mb-0" style="color: #f0f0f0;">
+
+                      <!-- <a class="text-sm text-surface-dark border-1 rounded-full py-1 px-[8px]"  href="#">Explore More Courses </a> -->
+
+                      <a class="py-2 px-3 bg-surface-dark font-medium text-sm text-nowrap text-primary-dark block w-full text-center rounded rounded-[26px] focus:outline-hidden"
+                        href="#">
+                        Explore More Courses
+                      </a>
+                    </h2>
+
+
+                  </section>
+
+                </div>
+              </div>
+              <!-- End Dropdown Menu -->
+            </div>
+            <!-- End Dropdown Link -->
+
+
+            <!-- Dropdown Link -->
+
+            <a class="md:px-3 md:py-4 text-base text-surface-dark" href="index.html"
+              aria-current="page">Career-Opportunities </a>
+
+            <!-- End Dropdown Link -->
+
+
+            <!-- Dropdown Link -->
+
+            <a class="md:px-3 md:py-4 text-base text-surface-dark" href="index.html" aria-current="page">Contact </a>
+
+            <!-- End Dropdown Link -->
+
+
+            <!-- Dropdown Link -->
+            <div class="md:hidden">
+              <a class="group inline-flex items-center gap-x-2 py-2 px-8 bg-surface-dark text-sm text-nowrap rounded rounded-[26px] text-primary-dark focus:outline-hidden"
+                href="#">
+                Login/Register
+              </a>
+            </div>
+
+            <!-- End Dropdown Link -->
+
+          </div>
+        </div>
+        <!-- End Nav -->
+      </div>
+      <!-- End Collapse -->
+    </nav>
+
+  </header>
+  <!-- ========== END HEADER ========== -->
+
+
+  <main id="main" class="flex flex-col gap-9">
+    <section id="hero"
+      class="bg-red min-h-[92vh] bg-no-repeat bg-cover bg-center text-surface-dark flex flex-col justify-center items-center gap-9 px-4"
+      style="background-image: url('./src/assets/modern-tech.png');">
+
+      <div class="max-w-2xl flex flex-col gap-3">
+        <h2 class="text-center text-4xl">
+          Launch Your Career in Software Development
+        </h2>
+
+        <p class="text-center">
+          Hands-on training in modern software development, web technologies, and industry tools designed to prepare you
+          for real tech careers.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row sm:justify-center w-5/6 gap-4">
+
+
+        <a class="py-2 px-8 bg-surface-dark text-sm text-nowrap text-primary-dark text-center rounded-[26px] focus:outline-hidden"
+          href="#">
+          Apply Now
+        </a>
+        <a class="py-2 px-8 border border-surface-dark text-sm text-nowrap text-center  rounded-[26px] focus:outline-hidden"
+          href="#">
+          View Courses
+        </a>
+      </div>
+
+    </section>
+
+    <section id="featured-courses" class="px-4">
+      <h2 class="text-2xl text-center"> Courses</h2>
+
+      <ul class="mt-4 flex gap-4 items-start overflow-x-auto snap-x snap-proximity">
+        <li class="w-80 shrink-0 snap-center">
+          <!-- Card -->
+          <div class="group flex flex-col h-full bg-card shadow rounded-xl">
+            <div class="w-full min-h-45 flex flex-col justify-center items-center bg-gray-200 rounded-t-xl">
+              <!-- <img src="./src/assets/modern-tech.png" width="100%" style="aspect-ratio: 16/9;" class="rounded-t-xl"
+                alt="image"> -->
+            </div>
+            <div class="p-4 md:p-6">
+
+              <h3 class="text-xl font-semibold text-foreground">
+                Website Development
+                <span class="block mb-1 text-xs font-semibold uppercase text-primary">
+                  Intake ongoing
+                </span>
+              </h3>
+
+              <p class="mt-3 text-muted-foreground-1 text-sm text-muted">
+                Learn how to build modern websites and web applications from scratch.
+              </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 p-4">
+
+
+              <a class="py-2 px-3 bg-primary text-sm text-nowrap text-surface-dark text-center rounded-[26px] focus:outline-hidden flex-1"
+                href="#">
+                Apply Now
+              </a>
+              <a class="py-2 px-3 border border-gray-600 text-sm text-nowrap text-center  rounded-[26px] focus:outline-hidden flex-1"
+                href="#">
+                Learn More
+              </a>
+            </div>
+
+          </div>
+          <!-- End Card -->
+        </li>
+
+
+        <li class="w-80 shrink-0 snap-center">
+          <!-- Card -->
+          <div class="group flex flex-col h-full bg-card shadow rounded-xl">
+            <div class="min-h-45 w-full flex flex-col justify-center items-center bg-gray-300 rounded-t-xl">
+              <!-- <img src="./src/assets/modern-tech.png" width="100%" style="aspect-ratio: 16/9;" class="rounded-t-xl"
+                alt="image"> -->
+            </div>
+            <div class="p-4 md:pt-6 md:px-6">
+
+              <h3 class="text-xl font-semibold text-foreground">
+                UI/UX Design
+                <span class="block mb-1 text-xs font-semibold uppercase text-primary">
+                  Next Intake: April
+                </span>
+              </h3>
+
+              <p class="mt-3 text-muted-foreground-1 text-sm text-muted">
+                Learn how to design intuitive and engaging digital experiences.
+              </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 p-4">
+
+
+              <a class="py-2 px-3 bg-primary text-sm text-nowrap text-surface-dark text-center rounded-[26px] focus:outline-hidden flex-1"
+                href="#">
+                Apply Now
+              </a>
+              <a class="py-2 px-3 border border-gray-600 text-sm text-nowrap text-center  rounded-[26px] focus:outline-hidden flex-1"
+                href="#">
+                Learn More
+              </a>
+            </div>
+
+          </div>
+          <!-- End Card -->
+        </li>
+
+
+        <li class="w-80 shrink-0 snap-center">
+          <!-- Card -->
+          <div class="group flex flex-col h-full bg-card shadow rounded-xl">
+            <div class="min-h-45 w-full flex flex-col justify-center items-center bg-gray-400 rounded-t-xl">
+              <!-- <img src="./src/assets/modern-tech.png" width="100%" style="aspect-ratio: 16/9;" class="rounded-t-xl"
+                alt="image"> -->
+            </div>
+            <div class="p-4 md:pt-6 md:px-6">
+
+              <h3 class="text-xl font-semibold text-foreground">
+                Front End Development
+                <span class="block mb-1 text-xs font-semibold uppercase text-primary">
+                  Intake ongoing
+                </span>
+              </h3>
+
+              <p class="mt-3 text-muted-foreground-1 text-sm text-muted">
+
+                Design and build beautiful, responsive user interfaces using modern technologies.
+              </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 p-4">
+
+
+              <a class="py-2 px-3 bg-primary text-sm text-nowrap text-surface-dark text-center rounded-[26px] focus:outline-hidden flex-1"
+                href="#">
+                Apply Now
+              </a>
+              <a class="py-2 px-3 border border-gray-600 text-sm text-nowrap text-center  rounded-[26px] focus:outline-hidden flex-1"
+                href="#">
+                Learn More
+              </a>
+            </div>
+
+          </div>
+          <!-- End Card -->
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <aside class="mt-20 px-4 pb-4">
+    <h1 class="lg:text-center text-2xl mb-4 bg-secondary lg:skew-x-[-5deg] rounded text-surface-dark py-2 px-4"> School
+      Blog </h1>
+
+
+    <ul class="flex flex-col gap-4 items-start lg:flex-row lg:gap-12 flex-wrap lg:justify-center">
+      <li class="w-full lg:max-w-[45%]">
+        <section class="flex flex-col gap-4">
+          <h3 class="font-medium text-xl border-b border-b-gray-400"> How To Master Tailwind CSS </h3>
+          <p class="-mt-2">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus incidunt, libero temporibus placeat aperiam
+            asperiores et error culpa voluptatum earum! Animi quis quas dolor sit veniam quia, autem exercitationem
+            esse.
+          </p>
+
+          <a href="#" class="text-blue-500"> Read More</a>
+        </section>
+      </li>
+
+      <li class="w-full lg:max-w-[45%]">
+        <section class="flex flex-col gap-4">
+          <h3 class="font-medium text-xl border-b border-b-gray-400"> Top Tips for Responsive Design Tailwind CSS </h3>
+          <p class="-mt-2">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus incidunt, libero temporibus placeat aperiam
+            asperiores et error culpa voluptatum earum! Animi quis quas dolor sit veniam quia, autem exercitationem
+            esse.
+          </p>
+
+          <a href="#" class="text-blue-500"> Read More</a>
+        </section>
+      </li>
+
+      <li class="w-full lg:max-w-[45%]">
+        <section class="flex flex-col gap-4">
+          <h3 class="font-medium text-xl border-b border-b-gray-400"> Understanding Utility-First CSS </h3>
+          <p class="-mt-2">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus incidunt, libero temporibus placeat aperiam
+            asperiores et error culpa voluptatum earum! Animi quis quas dolor sit veniam quia, autem exercitationem
+            esse.
+          </p>
+
+          <a href="#" class="text-blue-500"> Read More</a>
+        </section>
+      </li>
+
+      <li class="w-full lg:max-w-[45%]">
+        <section class="flex flex-col gap-4">
+          <h3 class="font-medium text-xl border-b border-b-gray-400">
+            Beginners Guide To Web-Accessibility
+          </h3>
+          <p class="-mt-2">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus incidunt, libero temporibus placeat aperiam
+            asperiores et error culpa voluptatum earum! Animi quis quas dolor sit veniam quia, autem exercitationem
+            esse.
+          </p>
+
+          <a href="#" class="text-blue-500"> Read More</a>
+        </section>
+      </li>
+
+      <li class="w-full lg:max-w-[45%]">
+        <section class="flex flex-col gap-4">
+          <h3 class="font-medium text-xl border-b border-b-gray-400">
+            Grid VS Flexbox
+          </h3>
+          <p class="-mt-2">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus incidunt, libero temporibus placeat aperiam
+            asperiores et error culpa voluptatum earum! Animi quis quas dolor sit veniam quia, autem exercitationem
+            esse.
+          </p>
+
+          <a href="#" class="text-blue-500"> Read More</a>
+        </section>
+      </li>
+
+      <li class="w-full lg:max-w-[45%]">
+        <section class="flex flex-col gap-4">
+          <h3 class="font-medium text-xl border-b border-b-gray-400">
+            10 Must-Know HTML Tips
+          </h3>
+          <p class="-mt-2">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus incidunt, libero temporibus placeat aperiam
+            asperiores et error culpa voluptatum earum! Animi quis quas dolor sit veniam quia, autem exercitationem
+            esse.
+          </p>
+
+          <a href="#" class="text-blue-500"> Read More</a>
+        </section>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="w-full mt-9 px-4 sm:px-6 lg:px-8 bg-secondary-dark text-gray-300">
+    <div class="py-6 border-t border-footer-line">
+      <div class="flex flex-wrap justify-center items-center gap-4 lg:gap-20">
+        <div>
+          <p class="text-xs text-muted-foreground-2 text-center">
+            © 2026 Institute Of Software Technologies (IST)
+          </p>
+        </div>
+        <!-- End Col -->
+
+        <!-- List -->
+        <ul class="flex flex-wrap items-center justify-center gap-4">
+          <li
+            class="inline-block relative pe-4 text-xs last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-1.5 before:-translate-y-1/2 before:size-[3px] before:rounded-full before:bg-surface-3">
+            <a class="text-xs text-muted-foreground-1 underline focus:outline-hidden focus:decoration-2" href="#">
+              X (Twitter)
+            </a>
+          </li>
+          <li
+            class="inline-block relative pe-4 text-xs last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-1.5 before:-translate-y-1/2 before:size-[3px] before:rounded-full before:bg-surface-3">
+            <a class="text-xs text-muted-foreground-1 underline focus:outline-hidden focus:decoration-2" href="#">
+              Facebook
+            </a>
+          </li>
+          <li class="inline-block pe-4 text-xs">
+            <a class="text-xs text-muted-foreground-1 underline focus:outline-hidden focus:decoration-2" href="#">
+              Instagram
+            </a>
+          </li>
+          <li class="inline-block">
+            <!-- Theme Toggler -->
+            <button data-theme-click
+              class="flex justify-center items-center size-7 bg-layer border border-layer-line text-layer-foreground rounded-full hover:bg-layer-hover focus:outline-hidden focus:bg-layer-focus">
+
+            </button>
+            <!-- End of Theme Toggler -->
+          </li>
+        </ul>
+        <!-- End List -->
+      </div>
+    </div>
+  </footer>
+  <!-- ========== END FOOTER ========== -->
+
+  <script src="node_modules/preline/dist/preline.js"></script>
+  <script src="./src/scripts/theme.js"></script>
+
+
+</body>
+
+</html>
