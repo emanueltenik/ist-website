@@ -24,22 +24,19 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20 # Stable LTS recommended
+          node-version: 20
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        # 'npm ci' is faster and more reliable for CI/CD
+        run: npm ci
 
       - name: Build project
         run: npm run build
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Vite default output directory
           path: './dist'
 
   deploy:
